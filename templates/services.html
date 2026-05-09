@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Flask</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+        h1, h2 { color: #2c3e50; }
+        ul { margin-left: 22px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+        th, td { border: 1px solid #ccc; padding: 10px; }
+        th { background: #f4f4f4; }
+        .note { background: #eef7ff; padding: 12px; border-left: 4px solid #3498db; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+
+
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('services')}}">Services</a>
+    </nav>
+
+
+
+    <h1>Servicios que se pueden crear con Flask</h1>
+    <p>Flask permite desarrollar muchos tipos de servicios web, desde aplicaciones simples hasta APIs y sitios dinámicos.</p>
+
+    <div class="note">
+        <strong>Servicio:</strong> un elemento funcional de la aplicación web que responde a peticiones, gestiona datos o muestra información.
+    </div>
+
+    <h2>Tipos de servicios comunes</h2>
+    <ul>
+        <li>API REST para intercambio de datos entre frontend y backend.</li>
+        <li>Formularios de registro y envío de información.</li>
+        <li>Autenticación de usuarios con inicio de sesión.</li>
+        <li>Gestión de contenido dinámico con bases de datos.</li>
+        <li>Servicios de consulta para mostrar informes o resultados.</li>
+    </ul>
+
+    <h2>Servicios prácticos en Flask</h2>
+    <ol>
+        <li>Registro y login de usuarios.</li>
+        <li>Publicación de posts o noticias.</li>
+        <li>Carrito de compras y procesamiento de pedidos.</li>
+        <li>API para aplicaciones móviles o SPA.</li>
+        <li>Panel de administración para gestionar datos.</li>
+    </ol>
+
+    <h2>Ejemplo de servicios con Flask</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Servicio</th>
+                <th>Función</th>
+                <th>Uso típico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>API REST</td>
+                <td>Enviar y recibir JSON.</td>
+                <td>Aplicaciones móviles, SPA y clientes externos.</td>
+            </tr>
+            <tr>
+                <td>Formularios</td>
+                <td>Capturar datos del usuario.</td>
+                <td>Contacto, pedidos, encuestas.</td>
+            </tr>
+            <tr>
+                <td>Autenticación</td>
+                <td>Validar usuarios y sesiones.</td>
+                <td>Acceso seguro a áreas privadas.</td>
+            </tr>
+            <tr>
+                <td>Dashboard</td>
+                <td>Mostrar información en tiempo real.</td>
+                <td>Administración y métricas.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>¿Cómo se construye un servicio en Flask?</h2>
+    <p>En Flask, cada servicio comienza con una ruta y una función que responde a una URL específica.</p>
+
+    <pre><code>@app.route('/api/data')
+def get_data():
+    return jsonify({'status': 'ok', 'data': []})
+</code></pre>
+
+    <p>Este es un ejemplo simple de un servicio que devuelve datos en formato JSON.</p>
+</body>
+</html>

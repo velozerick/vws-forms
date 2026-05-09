@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Flask</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; }
+        th { background-color: #ecf0f1; }
+        ul, ol { margin-left: 22px; }
+        .highlight { background-color: #f9f9f9; padding: 12px; border-left: 4px solid #3498db; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('services')}}">Services</a>
+    </nav>
+
+
+
+    
+    <h1>About Flask</h1>
+    <p>Flask es un microframework de Python que sirve para construir aplicaciones web sencillas y flexibles.</p>
+
+    <div class="highlight">
+        <strong>¿Por qué elegir Flask?</strong>
+        <p>Flask ofrece una base ligera que te permite agregar solo lo que necesitas, ideal para proyectos pequeños o prototipos rápidos.</p>
+    </div>
+
+    <h2>Características principales</h2>
+    <ul>
+        <li>Rutas sencillas con decoradores.</li>
+        <li>Renderizado de plantillas HTML con Jinja2.</li>
+        <li>Control de solicitudes HTTP y formularios.</li>
+        <li>Ampliable con extensiones cuando el proyecto crece.</li>
+    </ul>
+
+    <h2>Flujo básico de una app Flask</h2>
+    <ol>
+        <li>Importar Flask y crear la aplicación.</li>
+        <li>Definir rutas con <code>@app.route</code>.</li>
+        <li>Escribir funciones que devuelven HTML o renderizan plantillas.</li>
+        <li>Ejecutar la app en modo debug durante desarrollo.</li>
+    </ol>
+
+    <h2>Comparación rápida</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Flask</td>
+                <td>Microframework web en Python, fácil de configurar y usar.</td>
+            </tr>
+            <tr>
+                <td>Jinja2</td>
+                <td>Motor de plantillas que permite insertar variables y lógica en HTML.</td>
+            </tr>
+            <tr>
+                <td>Rutas</td>
+                <td>Permiten definir qué contenido se muestra en cada URL.</td>
+            </tr>
+            <tr>
+                <td>Debug</td>
+                <td>Modo de desarrollo que recarga la app al guardar cambios.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Ejemplo de código</h2>
+    <p>Un pequeño ejemplo de la estructura típica de Flask:</p>
+    <pre><code>from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+
+    <h2>Ventajas de Flask</h2>
+    <ul>
+        <li>Rápido de aprender.</li>
+        <li>Flexible y personalizable.</li>
+        <li>Perfecto para APIs y pequeños sitios web.</li>
+        <li>Gran soporte de la comunidad.</li>
+    </ul>
+
+    <p>Esta página demuestra cómo Flask combina HTML, rutas y plantillas para crear aplicaciones web dinámicas.</p>
+</body>
+</html>
