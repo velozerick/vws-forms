@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de requerimientos Desarrollo Web</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <main>
+    <h1>Formulario de requerimientos – Desarrollo Web</h1>
+    <p>Este formulario nos ayudará a entender exactamente qué necesitas. No necesitas conocimientos técnicos. Responde
+      con lo que tengas en mente.</p>
+
+    <form action="#" method="post">
+      <div>
+        <label for="negocio">Nombre del negocio *</label><br>
+        <input type="text" id="negocio" name="negocio" required>
+      </div>
+
+      <div>
+        <label for="nombre">Tu nombre *</label><br>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div>
+        <label for="telefono">Teléfono *</label><br>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+
+      <div>
+        <label for="email">Correo electrónico *</label><br>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <fieldset>
+        <legend>¿Qué tipo de página o sistema necesitas? *</legend>
+        <p>Selecciona la opción que más se acerque a tu idea:</p>
+        <div>
+          <input type="radio" id="pagina-sencilla" name="tipo" value="pagina-sencilla" required>
+          <label for="pagina-sencilla">Una página sencilla donde mostrar mi negocio</label>
+        </div>
+        <div>
+          <input type="radio" id="varias-secciones" name="tipo" value="varias-secciones">
+          <label for="varias-secciones">Un sitio con varias secciones (Inicio, Servicios, Contacto, etc.)</label>
+        </div>
+        <div>
+          <input type="radio" id="sistema-interactivo" name="tipo" value="sistema-interactivo">
+          <label for="sistema-interactivo">Un sistema donde los usuarios puedan interactuar (login, datos, panel,
+            etc.)</label>
+        </div>
+        <div>
+          <input type="radio" id="orientacion" name="tipo" value="orientacion">
+          <label for="orientacion">No estoy seguro, necesito orientación</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="descripcion">Cuéntame cómo imaginas tu página o sistema</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+      </div>
+
+      <fieldset>
+        <legend>¿Qué quieres mostrar de tu página o sistema? *</legend>
+        <p>Marca lo que te gustaría incluir:</p>
+        <div>
+          <input type="checkbox" id="info-general" name="mostrar[]" value="info-general">
+          <label for="info-general">Información general (quién soy, qué hago)</label>
+        </div>
+        <div>
+          <input type="checkbox" id="servicios" name="mostrar[]" value="servicios">
+          <label for="servicios">Servicios</label>
+        </div>
+        <div>
+          <input type="checkbox" id="productos" name="mostrar[]" value="productos">
+          <label for="productos">Productos o menú</label>
+        </div>
+        <div>
+          <input type="checkbox" id="galeria" name="mostrar[]" value="galeria">
+          <label for="galeria">Galería de imágenes</label>
+        </div>
+        <div>
+          <input type="checkbox" id="ubicacion" name="mostrar[]" value="ubicacion">
+          <label for="ubicacion">Ubicación/mapa</label>
+        </div>
+        <div>
+          <label for="otros-mostrar">Otros:</label><br>
+          <input type="text" id="otros-mostrar" name="otros_mostrar">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Diseño (cómo quieres que se vea)</legend>
+        <p>Si tienes ejemplos de páginas que te gusten, compártelos:</p>
+        <div>
+          <label for="ejemplos">Enlaces o notas:</label><br>
+          <textarea id="ejemplos" name="ejemplos" rows="3"></textarea>
+        </div>
+        <div>
+          <p>¿Qué estilo prefieres? *</p>
+          <div>
+            <input type="radio" id="simple" name="estilo" value="simple" required>
+            <label for="simple">Simple y limpio</label>
+          </div>
+          <div>
+            <input type="radio" id="moderno" name="estilo" value="moderno">
+            <label for="moderno">Moderno</label>
+          </div>
+          <div>
+            <input type="radio" id="elegante" name="estilo" value="elegante">
+            <label for="elegante">Elegante</label>
+          </div>
+          <div>
+            <input type="radio" id="llamativo" name="estilo" value="llamativo">
+            <label for="llamativo">Llamativo/colorido</label>
+          </div>
+          <div>
+            <input type="radio" id="sin-preferencia" name="estilo" value="sin-preferencia">
+            <label for="sin-preferencia">No tengo preferencia</label>
+          </div>
+          <div>
+            <label for="otro-estilo">Otros:</label><br>
+            <input type="text" id="otro-estilo" name="otro_estilo">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Funcionalidades</legend>
+        <p>Marca lo que te gustaría (si no sabes, puedes dejarlo en blanco):</p>
+        <div>
+          <input type="checkbox" id="animaciones" name="funcionalidades[]" value="animaciones">
+          <label for="animaciones">Animaciones o efectos visuales</label>
+        </div>
+        <div>
+          <input type="checkbox" id="whatsapp" name="funcionalidades[]" value="whatsapp">
+          <label for="whatsapp">Botón de WhatsApp</label>
+        </div>
+        <div>
+          <input type="checkbox" id="contacto" name="funcionalidades[]" value="contacto">
+          <label for="contacto">Formulario de contacto</label>
+        </div>
+        <div>
+          <input type="checkbox" id="correo" name="funcionalidades[]" value="correo">
+          <label for="correo">Formulario que envíe mensajes a mi correo</label>
+        </div>
+        <div>
+          <input type="checkbox" id="registro" name="funcionalidades[]" value="registro">
+          <label for="registro">Registro de usuarios (crear cuentas)</label>
+        </div>
+        <div>
+          <input type="checkbox" id="panel" name="funcionalidades[]" value="panel">
+          <label for="panel">Panel para administrar información</label>
+        </div>
+        <div>
+          <input type="checkbox" id="guardar-info" name="funcionalidades[]" value="guardar-info">
+          <label for="guardar-info">Guardar información (clientes, pedidos, etc.)</label>
+        </div>
+        <div>
+          <input type="checkbox" id="no-seguro" name="funcionalidades[]" value="no-seguro">
+          <label for="no-seguro">No estoy seguro</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Disponibilidad de contenidos</legend>
+        <div>
+          <p>¿Ya cuentas con los textos o información para tu página? *</p>
+          <div>
+            <input type="radio" id="textos-si" name="textos" value="si" required>
+            <label for="textos-si">Si</label>
+          </div>
+          <div>
+            <input type="radio" id="textos-no" name="textos" value="no">
+            <label for="textos-no">No</label>
+          </div>
+          <div>
+            <input type="radio" id="textos-parcialmente" name="textos" value="parcialmente">
+            <label for="textos-parcialmente">Parcialmente</label>
+          </div>
+        </div>
+
+        <div>
+          <p>¿Ya cuentas con imágenes o fotografías? *</p>
+          <div>
+            <input type="radio" id="imagenes-si" name="imagenes" value="si" required>
+            <label for="imagenes-si">Si</label>
+          </div>
+          <div>
+            <input type="radio" id="imagenes-no" name="imagenes" value="no">
+            <label for="imagenes-no">No</label>
+          </div>
+          <div>
+            <input type="radio" id="imagenes-parcialmente" name="imagenes" value="parcialmente">
+            <label for="imagenes-parcialmente">Parcialmente</label>
+          </div>
+        </div>
+
+        <div>
+          <p>¿Cuentas con logotipo? *</p>
+          <div>
+            <input type="radio" id="logo-si" name="logo" value="si" required>
+            <label for="logo-si">Si</label>
+          </div>
+          <div>
+            <input type="radio" id="logo-no" name="logo" value="no">
+            <label for="logo-no">No</label>
+          </div>
+          <div>
+            <input type="radio" id="logo-parcialmente" name="logo" value="parcialmente">
+            <label for="logo-parcialmente">Parcialmente</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="fecha">¿Cuándo te gustaría tener el proyecto terminado? *</label><br>
+        <input type="text" id="fecha" name="fecha" required>
+      </div>
+
+      <div>
+        <label for="comentarios">Comentarios adicionales</label><br>
+        <textarea id="comentarios" name="comentarios" rows="5"
+          placeholder="Puedes escribir cualquier idea, duda o detalle que consideres importante:"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Enviar formulario</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
