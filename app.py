@@ -12,7 +12,9 @@ flask necesita:
 
 #import
 #from flask import Flask
-from flask import Flask, render_template # le dice a flaks renderiza un archivo html
+from flask import Flask, render_template, request # le dice a flaks renderiza un archivo html,importamos request
+
+#request representa la peticion que llego desde el navegador
 
 #Create app
 app = Flask(__name__)
@@ -21,13 +23,28 @@ app = Flask(__name__)
 
 
 #Define route for home app
-@app.route("/") # the main page
-
+@app.route("/", methods=["GET","POST"]) # the main page
 #function executed when user enters "/"
+#la ruta acepta GET y POST
+
 def home():
     #response returned to browser
     #return "<h1> Hello there Flask, nice to meet you </h1>"
-    return render_template("home.html")
+
+    #verify if request recived POST, when user submmits form
+   if request.method == "POST":
+        #Backend logic will go here
+        
+        #get value from input named "nombre"
+        negocio = request.form["negocio"]
+        nombre = request.form["nombre"]
+        print(f"""
+        Negocio: {negocio} 
+        Nombre: {nombre}
+                  """)
+
+   return render_template("home.html")
+
 
 
 
