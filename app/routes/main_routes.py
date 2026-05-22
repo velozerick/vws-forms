@@ -23,9 +23,9 @@ def home():
 
         #Hacer uso de diccionario
         form_data = {
-                "Negocio": request.form.get("negocio"),
-                "Nombre": request.form.get("nombre"),
-                "Telefono": request.form.get("telefono")
+                "negocio": request.form.get("negocio"),
+                "nombre": request.form.get("nombre"),
+                "telefono": request.form.get("telefono")
                 }
         
         #Enviar dato a form_service

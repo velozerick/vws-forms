@@ -1,0 +1,12 @@
+negocio:test2
+nombre: test2
+telefono: 5555555555555
+-------------
+negocio:Test3
+nombre: nametest
+telefono: 555555555555
+-------------
+negocio:casa Gonzalez
+nombre: Juan
+telefono: 54686948468
+-------------

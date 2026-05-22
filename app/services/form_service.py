@@ -5,5 +5,18 @@
 
 def process_data(form_data):
 
-    print(form_data)
+    #Abrir archivo modo append
+    # "a" agregar sin borrar contenido
+    with open("data.txt", "a") as file:
+        #Escribir datos en el archivo
+        file.write(f'negocio:{form_data["negocio"]}\n')
+        file.write(f"nombre: {form_data["nombre"]}\n")
+        file.write(f"telefono: {form_data["telefono"]}\n")
+
+        file.write("-------------\n")
+
+
+
+    #print(form_data)
+
 
