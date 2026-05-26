@@ -12,6 +12,7 @@ def process_data(form_data):
         file.write(f'negocio:{form_data["negocio"]}\n')
         file.write(f"nombre: {form_data["nombre"]}\n")
         file.write(f"telefono: {form_data["telefono"]}\n")
+        file.write(f'email:{form_data["email"]}\n')
 
         file.write("-------------\n")
 

@@ -10,3 +10,8 @@ negocio:casa Gonzalez
 nombre: Juan
 telefono: 54686948468
 -------------
+negocio:SYREI
+nombre: Hugo
+telefono: 56655555858
+email:syreo@gmail.com
+-------------

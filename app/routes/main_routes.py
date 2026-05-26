@@ -25,7 +25,9 @@ def home():
         form_data = {
                 "negocio": request.form.get("negocio"),
                 "nombre": request.form.get("nombre"),
-                "telefono": request.form.get("telefono")
+                "telefono": request.form.get("telefono"),
+                "email": request.form.get
+                ("email")
                 }
         
         #Enviar dato a form_service
