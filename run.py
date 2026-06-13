@@ -9,4 +9,8 @@ app = create_app()
 if __name__ == "__main__":
 
     #levanta el servidor flask en modo desarrollo
-    app.run(debug = True)
+    app.run(
+        debug = True,
+        host="0.0.0.0"
+        )
+

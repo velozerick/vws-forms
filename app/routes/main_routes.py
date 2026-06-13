@@ -14,6 +14,7 @@ main = Blueprint("main", __name__)
 
 def home():
     #Mostramos el html
+    mensaje = None
 
     #verificamos si el usuario envio el formulario
     if request.method == "POST":
@@ -30,9 +31,15 @@ def home():
                 ("email")
                 }
         
+        
         #Enviar dato a form_service
         process_data(form_data)
+        #Mostrar mensaje lluego de enviar elformulario
+        mensaje = f"Gracias {form_data['nombre']}, recibí tus respuestas, en breve me comunicaré contigo."
 
+        return render_template ("thanks.html", mensaje=mensaje)
+
+        
     return render_template ("home.html")
 
 

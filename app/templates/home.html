@@ -10,6 +10,8 @@
 
 <body>
   <main>
+    <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Logo VWS" class="logo">
+        
     <h1>Formulario de requerimientos  Desarrollo Web</h1>
     <p>Este formulario nos ayudará a entender exactamente qué necesitas. No necesitas conocimientos técnicos. Responde
       con lo que tengas en mente.</p>
@@ -34,7 +36,8 @@
         <label for="email">Correo electrónico *</label><br>
         <input type="email" id="email" name="email" required>
       </div>
-<!--
+
+        <!--
       <fieldset>
         <legend>¿Qué tipo de página o sistema necesitas? *</legend>
         <p>Selecciona la opción que más se acerque a tu idea:</p>
@@ -226,7 +229,10 @@
           placeholder="Puedes escribir cualquier idea, duda o detalle que consideres importante:"></textarea>
       
       </div>
+    
     -->
+
+      
       <div>
         <button type="submit">Enviar formulario</button>
       </div>
