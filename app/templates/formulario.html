@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VWS Forms</title>
+</head>
+<body>
+
+    <h1>Inicia el formulario para entender tus necesidades</h1>
+    <p>formulario</p>
+
+    <form action="{{url_for('main.formulario')}}" method="POST">
+        <label for="negocio">Nombre del negocio o proyecto:</label>
+        <input type="text" id="negocio" name="negocio">
+        <br>
+        <label for="nombre">Nombre de la persona de contacto:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br>
+        <label for="telefono">Teléfono/WhatsApp:</label>
+        <input type="tel" id="telefono" name="telefono">
+        <br>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email">
+
+        <button type="submit">Enviar respuestas</button>
+
+    </form>
+
+
+
+    
+
+
+
+</body>
+</html>
